@@ -22,4 +22,7 @@ If you haven't already, create your database and table:
 Add a user with SELECT-rights to this database/table.
 Then edit config.php and setup your database-connection with the SELECT-user.
 
+Install Zend framework with apt-get install libzend-framework-php and then create a link to it with:
+	ln -s /usr/share/php/libzend-framework-php/Zend Zend
 
+Done
