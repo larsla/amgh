@@ -1,0 +1,25 @@
+
+
+Copy index.php to the web-folder you want it in and then fetch php_include with:
+	git clone https://larsla@github.com/larsla/php_include.git
+
+If you haven't already, create your database and table:
+
+ CREATE DATABASE `smartcards` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+ USE `smartcards`;
+ CREATE TABLE `sunray` (
+  `token` varchar(255) NOT NULL,
+  `host` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `desc` varchar(255) NOT NULL,
+  `fog` varchar(255) NOT NULL,
+  `issuer` varchar(255) NOT NULL,
+  `created` date NOT NULL,
+  `hidden` tinyint(1) NOT NULL,
+  FULLTEXT KEY `host` (`host`)
+ ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+Add a user with SELECT-rights to this database/table.
+Then edit config.php and setup your database-connection with the SELECT-user.
+
+

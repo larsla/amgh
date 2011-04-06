@@ -1,0 +1,5 @@
+
+In the SunRay thin terminal system from Sun (now Oracle) you can route where a terminal/smartcard should be directed via a feature named AMGH.
+This is a small system that stores this information in a central MySQL-database and then lets the SunRay-servers fetch the file at a regular interval.
+
+The server bit is written in PHP and the client(the part running on the SunRay server) is written in sh and uses curl to fetch the amgh-database-file.
